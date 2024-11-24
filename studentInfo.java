@@ -35,25 +35,33 @@ public class studentInfo extends javax.swing.JFrame {
         txtContact = new javax.swing.JTextField();
         removeButton = new javax.swing.JButton();
         ClearButton = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(null);
 
-        jLabel1.setBackground(new java.awt.Color(153, 153, 255));
+        jLabel1.setBackground(new java.awt.Color(255, 204, 204));
         jLabel1.setFont(new java.awt.Font("Segoe UI Black", 0, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(153, 204, 255));
-        jLabel1.setText("Student Info");
+        jLabel1.setForeground(new java.awt.Color(0, 51, 51));
+        jLabel1.setText("  Student Info");
         jLabel1.setBorder(new javax.swing.border.MatteBorder(null));
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(500, 20, 270, 52);
 
         jButton7.setBackground(new java.awt.Color(255, 255, 204));
         jButton7.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
         jButton7.setText("Back");
+        jButton7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton7ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton7);
+        jButton7.setBounds(1180, 610, 90, 28);
 
         jTable1.setAutoCreateRowSorter(true);
+        jTable1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -73,24 +81,44 @@ public class studentInfo extends javax.swing.JFrame {
         jTable1.setAutoscrolls(false);
         jScrollPane1.setViewportView(jTable1);
 
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(490, 120, 793, 453);
+
         jLabel2.setText("Student ID: ");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(40, 125, 100, 16);
 
         jLabel3.setText("Name: ");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(40, 210, 100, 16);
 
         jLabel4.setText("Department:");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(40, 291, 110, 16);
 
         jLabel5.setText("Batch: ");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(40, 350, 90, 16);
 
         jLabel6.setText("Contact Number: ");
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(40, 421, 110, 16);
 
-        SaveButton.setBackground(new java.awt.Color(255, 255, 204));
+        SaveButton.setBackground(new java.awt.Color(204, 204, 255));
         SaveButton.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
         SaveButton.setText("Save");
+        SaveButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         SaveButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SaveButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(SaveButton);
+        SaveButton.setBounds(40, 510, 109, 28);
+        getContentPane().add(txtID);
+        txtID.setBounds(153, 122, 299, 22);
+        getContentPane().add(txtName);
+        txtName.setBounds(153, 207, 299, 22);
 
         cmbDpt.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "CSE", "IT", "EEE", "CE", "Pharmacy", "BBA", "LLB" }));
         cmbDpt.addActionListener(new java.awt.event.ActionListener() {
@@ -98,110 +126,40 @@ public class studentInfo extends javax.swing.JFrame {
                 cmbDptActionPerformed(evt);
             }
         });
+        getContentPane().add(cmbDpt);
+        cmbDpt.setBounds(153, 288, 299, 22);
+        getContentPane().add(txtBatch);
+        txtBatch.setBounds(153, 347, 299, 22);
+        getContentPane().add(txtContact);
+        txtContact.setBounds(153, 418, 299, 22);
 
-        removeButton.setBackground(new java.awt.Color(255, 255, 204));
+        removeButton.setBackground(new java.awt.Color(204, 204, 255));
         removeButton.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
         removeButton.setText("Remove");
+        removeButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         removeButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 removeButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(removeButton);
+        removeButton.setBounds(340, 510, 120, 28);
 
-        ClearButton.setBackground(new java.awt.Color(255, 255, 204));
+        ClearButton.setBackground(new java.awt.Color(204, 204, 255));
         ClearButton.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
         ClearButton.setText("Clear");
+        ClearButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         ClearButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ClearButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(ClearButton);
+        ClearButton.setBounds(190, 510, 110, 28);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(394, 394, 394)
-                .addComponent(jLabel1)
-                .addGap(537, 537, 537))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton7))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(40, 40, 40)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel2)
-                                    .addComponent(jLabel3)
-                                    .addComponent(jLabel4))
-                                .addGap(47, 47, 47)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(cmbDpt, 0, 299, Short.MAX_VALUE)
-                                    .addComponent(txtName)
-                                    .addComponent(txtID)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(SaveButton, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
-                                .addComponent(ClearButton)
-                                .addGap(54, 54, 54)
-                                .addComponent(removeButton))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel6)
-                                    .addComponent(jLabel5))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtBatch)
-                                    .addComponent(txtContact))))
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 793, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 14, Short.MAX_VALUE)))
-                .addGap(22, 22, 22))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(jLabel1)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2)
-                            .addComponent(txtID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(63, 63, 63)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3))
-                        .addGap(59, 59, 59)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel4)
-                            .addComponent(cmbDpt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(37, 37, 37)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel5)
-                            .addComponent(txtBatch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(49, 49, 49)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel6)
-                            .addComponent(txtContact, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(66, 66, 66)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(removeButton)
-                            .addComponent(SaveButton)
-                            .addComponent(ClearButton))
-                        .addGap(70, 70, 70))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(42, 42, 42)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 453, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)))
-                .addComponent(jButton7)
-                .addGap(37, 37, 37))
-        );
+        jLabel7.setIcon(new javax.swing.ImageIcon("C:\\Users\\Omar\\OneDrive\\Pictures\\Icon\\main2.png")); // NOI18N
+        getContentPane().add(jLabel7);
+        jLabel7.setBounds(-350, -110, 1730, 1280);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -274,6 +232,7 @@ public static void addRowToJTable(Object[] dataRow){
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JScrollPane jScrollPane1;
     public static javax.swing.JTable jTable1;
     private javax.swing.JButton removeButton;
